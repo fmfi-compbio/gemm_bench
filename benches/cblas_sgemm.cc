@@ -47,10 +47,10 @@ void go(int n_layers, int batch_size, int hidden_size) {
 
 
     for (int i = 0; i < 2; i++) {
-        delete[] vecs[i];
+        free(vecs[i]);
     }
     for (int i = 0; i < n_layers; i++) {
-        delete[] mats[i];
+        free(mats[i]);
     }
     
 }
