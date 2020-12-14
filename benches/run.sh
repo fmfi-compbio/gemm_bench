@@ -1,7 +1,7 @@
 rm -f results
 
 for nl in 6 12; do 
-  for b in 1 8 64; do
+  for b in 1 4 16 64 256 1024; do
     for nnz in 64 128 256 512; do
       ./sparse_coo $nl $b 32 $nnz >>results;
     done
