@@ -57,6 +57,7 @@ void go(int n_layers, int batch_size, int hidden_size, int nnz) {
                                 rows,
                                 cols,
                                 v);
+        mkl_sparse_optimize ( coo );
         rinds.push_back(rows);
         cinds.push_back(cols);
         vals.push_back(v);

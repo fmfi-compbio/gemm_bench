@@ -66,6 +66,7 @@ void go(int n_layers, int batch_size, int hidden_size, int nnz) {
 
         sparse_matrix_t csr;
         mkl_sparse_convert_csr(coo, SPARSE_OPERATION_NON_TRANSPOSE, &csr);
+        mkl_sparse_optimize ( csr );
         mats.push_back(csr);
     }
 
